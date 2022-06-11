@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset= "UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Kártya</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!------------------------Application popup--------------------------->
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopupApplication()">×</div>
+          <form action="/action_page.php">
+            <div class="registration-container">
+              <h1 style="color: black;">Vágd zsebre Kolozsvárt!</h1>
+              <p style="color: black;">Please fill in this form with your information.</p>
+              <hr>
+          
+              <label for="email"><b style="color: black;">Email</b></label>
+              <input type="text" placeholder="Enter your email address" name="email" id="email" required>
+          
+              <label for="password"><b style="color: black;">Password</b></label>
+              <input type="password" placeholder="Enter your password" name="password" id="password" required>
+
+
+              <hr>
+              <p style="color: black;">Or create a new account <a href="#" >new account</a>.</p>
+          
+              <button type="submit" class="registerbtn">Login</button>
+            </div>
+          </form>
+          
+                  </div>
+    </div>
+
+<!------------------------Presenter popup--------------------------->
+    <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopupPresenter2()">×</div>
+          <h1 style="color: black;">Ingyenes buszbérlet</h1>
+          <p style="color: black;">A KMDSZ A Kártya felmutatásával ingyenesen kiválthatod a kolozsvári tömegközlekedési bérleted.</p>
+          <p style="color: black;">Nem kell mást tenned mint regisztrálni az alkalmazásban, majd ellátogatni a legközelebbi CTP irodába. Az ellenőrződ, valamint a digitális A Kártyád felmutatásával szert tehetsz a kedvezményre.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-3">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopupPresenter3()">×</div>
+          <h1 style="color: black;">Új dolgok a láthatáron!</h1>
+          <p style="color: black;">Az A kártya jelenleg az ingyenes buszbérlet kiváltására használható.</p>
+
+        <p style="color: black;">Csapatunk keményen dolgozik partnerségek kialakításán, annak érdekében, hogy ezzel jelentős összegeket tudj sporólni az egyetem mellett.</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-4">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopupPresenter4()">×</div>
+          <h1 style="color: black;">Bill Gates</h1>
+          <p style="color: black;">William Henry Gates III (born October 28, 1955) is an American business magnate, software developer, investor, author, and philanthropist. He is the co-founder of Microsoft Corporation.[4][5] During his career at Microsoft, Gates held the positions of chairman, chief executive officer (CEO), president and chief software architect, while also being the largest individual shareholder until May 2014.[6] He is considered one of the best known entrepreneurs of the microcomputer revolution of the 1970s and 1980s.</p>
+        </div>
+    </div>
+
+    <!-------------------------------Header----------------------->
+
+<header>
+    <nav>
+        <ul>
+            <li><a href=""><img src="Pictures/logoKMDSZw.png" alt="MaxIT logo" class="logo"></a></li>
+            <li class="rólunk"><a href="#rólunk">Rólunk</a></li>
+            <li class="kedvezmények"><a href="#kedvezmények">Kedvezmények</a></li>
+            <li class="contact"><a href="#kapcsolat">kapcsolat</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+        <li><a href=""><img src="Pictures/logoKMDSZw.png" alt="MaxIT logo" class="logo"></a></li>
+    <div id="myLinks">
+        <li class="rólunk"><a href="#rólunk">Rólunk</a></li>
+        <li class="kedvezmények"><a href="#kedvezmények">Kedvezmények</a></li>
+        <li class="contact"><a href="#kapcsolat">Kapcsolat</a></li>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+<!-- Home -->
+
+<section class="home-hero">
+    <h1> A kolozsvári egyetemisták <br>
+        <span>INGYENES diákkártyája</span>
+    </h1>
+    <br></br>
+
+    <a onclick="togglePopupApplication()" class="button button-accent">Kattints és vágd zsebre Kolozsvárt! </a>
+    <strong><p>Találkozzunk ősszel!</p></strong>
+
+</section>
+
+<div id="rólunk" class="container">
+    <section class="home-about">
+    <div class="home-about-textbox">
+        <h1 id="rólunk">What do we do?</h1>
+            <p>Az A kártya egy ingyenes diákigazolvány, amely 8. éve teszi lehetővé, a kolozsvári egyetemisták számára, hogy kiválthassák ingyenes (vagy kedvezményes) buszbérleteiket. Emellett az A kártya tulajdonosok KMDSZ tagokká válnak: rendezvényeinken kedvezményekben részesülhetnek és első kézből tájékozódhatnak. 
+            <p>
+                De ez még nem minden, hiszen az A kártyát kiváltó diákok különleges kedvezményekben részesülhetnek a KMDSZ partnereinél is: legyen az kocsma, étterem, fogászat, tetoválószalon, vagy akár fodrászat is.
+            </p>
+    </div>
+    </section>
+</div>
+
+<!--<div class="split-total">
+<div class="split">
+    <div class="centered">
+        <img src="Pictures/Team/man.png">
+        <h2>Paul</h2>
+            <p class= "split-text">
+                I am an enthusiastic, dynamic matematics-informatics student, seeking an internship position within an IT company, where I may be able to expand my knowledge in software tehnology. I am motivated to use my skills and background to ensure that I will make a positive contribution to the organization.I am an enthusiastic, dynamic matematics-informatics student, seeking an internship position within an IT company, where I may be able to expand my knowledge in software tehnology. I am motivated to use my skills and background to ensure that I will make a positive contribution to the organization.            </p>
+    </div>
+</div>
+
+<div class="split">
+    <div class="centered">
+        <img src="Pictures/Team/woman.png">
+        <h2>Jessica</h2>
+            <p class= "split-text">
+                I'm passionate about the intersection of purpose, innovation, and consumer-facing products and services. I believe in business for social good and, above all else, communicating results. I'm currently pursuing my MBA with a specialization in Social Impact, and concentrations in Marketing and Strategy. I'm looking to combine my passions for community building, rólunktelling and defining success metrics to help consumer brands and services I believe in reach more of their target consumers, develop strategic partnerships and measure their impact. My tendency to plan and my innate empathy have supported me throughout my educational and professional careers that have spanned continents and industries.            </p>
+    </div>
+</div>
+-->
+
+<div class="split">
+    <div class="centered">
+        <img src="Pictures/logoKMDSZw.png">
+        <h2>A Kolozsvári Magyar Diákszövetség</h2>
+            <p class= "split-text">
+                A Kolozsvári Magyar Diákszövetség (KMDSZ) a kolozsvári felsőfokú oktatási intézmények magyar diákjainak 1990 óta hatékonyan működő érdekképviseleti, érdekvédelmi és kulturális szervezete. A KMDSZ önálló jogi személyiségű, nonprofit és apolitikus civil egyesület. Működésének alapját a diákszövetség tagjainak önkéntes munkája képezi. Főbb céljai az önálló magyar nyelvű felsőfokú oktatási intézményrendszer létrehozásának és működtetésének támogatása, a hallgatók érdekképviselete és érdekvédelme, a magyar diákok szakmai képzésének és előmenetelének segítése, illetve szakmai tevékenységének támogatása; kapcsolatteremtés és ezeknek ápolása hazai és külföldi ifjúsági és diákszervezetekkel. Hozzájárul a magyar diákok közösségeinek formálásához, a kulturális igényeik kielégítéséhez, továbbá szociális és egyéb ösztöndíjakra való lehetőséget biztosít. Fent tart egy információs irodát, illetve egy Karrierirodát és egy Sportirodát, mely révén a diákok különböző gondjaira megoldást kínál.</p>
+    </div>
+</div>
+</div>
+
+
+<div class="timer">
+    <!----<h2><span>Countdown to the event</span> </h2>
+    <div class="countdown">
+        <div id="Day">NA</div>
+        <div id="Hour">NA</div>
+        <div id="Minute">NA</div>
+        <div id="Second">NA</div>
+--->
+   
+</div>
+
+ <!---
+<script>
+    var countDate = new Date('Jan 1, 2021 00:00:00').getTime();
+    function newYear(){
+        var now = new Date().getTime()
+        gap = countDate - now;
+        var Second=1000;
+        var Minute=Second*60;
+        var Hour=Minute*60;
+        var Day= Hour*24;
+
+        var d =Math.floor(gap/(Day));
+        var h =Math.floor((gap%(Day))/(Hour));
+        var m =Math.floor((gap%(Hour))/(Minute));
+        var s =Math.floor((gap%(Minute))/(Second));
+
+        document.getElementById('Day').innerText=d;
+        document.getElementById('Hour').innerText=h;
+        document.getElementById('Minute').innerText=m;
+        document.getElementById('Second').innerText=s;
+    }
+    setInterval(function(){
+        newYear();
+    },1000)
+</script>
+--->
+
+
+
+
+    <div class="container">
+        <div class="timeline">
+        <ul>
+            <li>
+            <div class="timeline-content">
+                <h3 class="date">2014</h3>
+                <h1>A Kezdet</h1>
+                <p>We had held our first global conference in the cultural house of a small city in Austria. Due to the good marketing strategy. There has been an unexpectedly high interest in our event.</p>
+            </div>
+            </li>
+            <li>
+            <div class="timeline-content">
+                <h3 class="date">2019</h3>
+                <h1>Digitalizálás</h1>
+                <p>Due to last years high attendance rate we decided to go bigger so we brought the conference to Vienna which is one of the most innovative cities in Europe.</p>
+            </div>
+            </li>
+            <li>
+            <div class="timeline-content">
+                <h3 class="date">2021</h3>
+                <h1>Elbukott projekt</h1>
+                <p>The COVID-19 pandemic shocked the world and like many other events, our had to be transferd to the online world. This allowed us to reach an even more people, becoming the largest online conference after CES.</p>
+            </div>
+            </li>
+            <li>
+            <div class="timeline-content">
+                <h3 class="date">2022 Október</h3>
+                <h1>A projekt feltámasztása</h1>
+                <p>Today still online, we are delivering as kedvezmények the world’s most influential people. The line-up of this year’s event is one that has been never seen before featuring Bill Gates, Jeff Bezos and many others.</p>
+            </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <h1 id="kedvezmények">Kedvezmények</h1>
+        <div class="column">
+            <div class="card">
+                <img src="/Pictures/Promo/promo1.jpg">
+                <h1>Buszbérlet</h1>
+                <p>Ingyenes vagy kedvezményes buszbérlet a kolozsváron tanuló egyetemisták számára</p>
+                <p>Érvényes:<strong> Egész tanévben </strong></p>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <button onclick="togglePopupPresenter2()">Részletek</button>
+            </div>
+        </div>
+
+
+        <div class="column">
+            <div class="card">
+                <img src="/Pictures/Promo/promo3.jpg">
+                <h1>Hamarosan...</h1>
+                <p>Látogass vissza később és fedezt fel az A Kártya által nyújtott további kedvezményeket!</p>
+                <p>Vágd zsebre Kolozsvárt!</p>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <button onclick="togglePopupPresenter3()">Részletek</button>
+            </div>
+        </div>
+        <!--
+        <div class="column">
+            <div class="card">
+                <img src="/Pictures/kedvezmények/bill_gates.jpg">
+                <h1>Bill Gates</h1>
+                <p>CEO & Founder</p>
+                <p>Microsoft</p>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <button onclick="togglePopupPresenter4()">Learn more</button>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/Pictures/kedvezmények/Jeff_Hawkins.png">
+                <h1>Jeff Hawkins</h1>
+                <p>Founder</p>
+                <p>Handspring</p>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <button onclick="togglePopupPresenter5()">Learn more</button>
+            </div>
+            -->
+        </div>
+
+        <!--    kapcsolat    --->
+
+
+    <div class="wrapper">
+        <h2 id="kapcsolat" style="font-family: Ebrima, sans-serif ">Kapcsolat</h2>
+        <button class="accordion">Hol tudom letölteni az alkalmazást?</button>
+        <div class="panel">
+        <p>Keresd az A Kártya alkalmazást az AppStore illetve Play Áruházakban vagy kattints a főoldalon található linkre.</p>
+        </div>
+    
+        <button class="accordion">Mire van szükségem az A Kártya kiváltásához?</button>
+        <div class="panel">
+        <p>Az A Kártya kiváltásának folyamata nagyon egyszerű, regisztráció után fel kell töltened egy szelfit valamint egy fényképet az ellenőrződről. Csapatunk rövid időn belül ellenőrzi az adataid és kezdődhet a megtakarítás.</p>
+        </div>
+    
+        <button class="accordion">Vállalkozásom van és A Kártya partnerré szeretnék vállni, mit kell tennem?</button>
+        <div class="panel">
+            <p>Nagyon köszönjük az érdeklődésed, kérjük lépj kapcsolatba velünk az alábbi elérhetőségek egyikén:</p>
+            <p><strong>Tel.:</strong>0755116251</p>
+            <p><strong>Email:</strong>office@kmdsz.ro</p>
+        </div>
+
+        <p>Nem találtad meg amit kerestél? Lépj kapcsolatba velünk!</p> 
+       <div id="error_message">
+           
+        </div>
+        <form action="" id="myform" onsubmit = "return validate();">
+          <div class="input_field">
+              <input type="text" placeholder="Név" id="name">
+          </div>
+          <div class="input_field">
+              <input type="text" placeholder="Tárgy" id="subject">
+          </div>
+          <div class="input_field">
+              <input type="text" placeholder="Telefon" id="phone">
+          </div>
+          <div class="input_field">
+              <input type="text" placeholder="Email" id="email">
+          </div>
+          <div class="input_field">
+              <textarea placeholder="Üzenet" id="message"></textarea>
+          </div>
+          <div class="btn">
+              <input type="submit">
+          </div>
+        </form>
+      </div>
+      
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>
